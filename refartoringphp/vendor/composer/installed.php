@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'hilke/refartoringphp',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '29f4d05fac39698be6f36deb1e1f0f16dca43e62',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'hilke/refartoringphp' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '29f4d05fac39698be6f36deb1e1f0f16dca43e62',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

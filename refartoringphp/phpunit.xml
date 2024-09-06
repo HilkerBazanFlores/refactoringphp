@@ -1,15 +1,15 @@
 <phpunit
-  xlmns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
   backupGlobals="true"
   backupStaticAttributes="false"
-  bootstrap="vendor/autoload.php"
+  bootstrap="vendor\autoload.php"
   cacheTokens="false"
   colors="true"
-  convertErrorsToExeptions="true"
-  convertnoticesToExeptions="true"
-  convertWarningsToExeptions="true"
-  forceCoversAnnotations="false"
+  convertErrorsToExceptions="true"
+  convertnoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  forceCoversAnnotation="false"
   mapTestClassNameToConverdClassName="false"
   processIsolation="false"
   stopOnError="false"
@@ -17,8 +17,15 @@
   stopOnIncomplete="false"
   stopOnSkipped="false"
   stopOnRisky="false"
-  timeoutForSmallTest="1"
-  timeoutForMediumTest="10"
-  timeoutForLargeTest="60"
-  verbose="false"
+  timeoutForSmallTests="1"
+  timeoutForMediumTests="10"
+  timeoutForLargeTests="60"
+  verbose="false">
+
+<testsuites>
+  <testsuite>
+    <directory>./test</directory>
+  </testsuite>
+</testsuites>
+
 </phpunit>
