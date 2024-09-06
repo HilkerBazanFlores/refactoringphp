@@ -31,26 +31,31 @@ class HtmlElement{
   public function open(): string
   {
     if (!empty($this->attributes)){
-
-      $htmlAttributes='';
-      foreach ($this->attributes as $name => $value){
-        if (is_numeric($attribute)){
-          $htmlAttributes.=' '.$value;
-        }else{
-          $htmlAttributes.=' '.$attribute.'="'.htmlentities($value, ENT_QUOTES, 'UTF-8').'"'; //name="value"
-        }
-        
-      }
-      //abrir la etiqueta con atributos
-      $result = '<'.$this->name.$htmlAttributes.'>';
-
-    //sino
+      $result = '<'.$this->name.$this->attributes().'>';
     }else{
-
-      //abrir la etiqueta con atributos
       $result = '<'.$this->name.'>';
     }
     return $result;
+  }
+
+  public function attributes(): string
+  {
+    $htmlAttributes = '';
+
+    foreach ($this->attributes as $name => $value){
+      $htmlAttributes .= $this->renderAttribute($attribute, $value); 
+    }
+    return $htmlAttributes;
+  }
+
+  protected function renderAttribute($attribute, $value): string
+  {
+    if (is_numeric($attribute)){
+      $htmlAttribute.=' '.$value;
+    }else{
+      $htmlAttribute.=' '.$attribute.'="'.htmlentities($value, ENT_QUOTES, 'UTF-8').'"'; //name="value"
+    }
+    return $htmlAttribute;
   }
 
   public function isVoid(): bool

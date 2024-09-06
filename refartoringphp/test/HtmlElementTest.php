@@ -12,7 +12,15 @@ class HtmlElementTest extends TestCase
     $this->assertTrue((new HtmlElement('img'))->isVoid());
   }
 
-  //* @test */
+   /** @test  */
+  function it_generates_attributes()
+  {
+    $element = new HtmlElement('span',['class'=> 'a_span','id'=>'the_span']);
+ 
+    $this->assertSame(' class="a_span" id="the_span"', $element->attributes());
+  }
+  
+  /* @test */
   function it_generates_a_paragraph_with_content()
   {
     $element = new HtmlElement('p', [], 'Este es el contenido');
@@ -22,7 +30,7 @@ class HtmlElementTest extends TestCase
     );
   }
 
-  //* @test */
+  /* @test */
   function it_generates_a_paragraph_with_content_and_an_id_attribute()
   {
     $element = new HtmlElement('p', [], 'Este es el contenido');
@@ -32,7 +40,7 @@ class HtmlElementTest extends TestCase
     );
   }
 
-  //* @test */
+  /* @test */
   function it_generates_a_paragraph_with_multiple_attributes()
   {
     $element = new HtmlElement('p', ['id' => 'my_paragraph','class'=> 'paragraph'], 'Este es el contenido');
@@ -42,7 +50,7 @@ class HtmlElementTest extends TestCase
     );
   }
 
-  //* @test */
+  /* @test */
   function it_generates_an_img_tag()
   {
     $element = new HtmlElement('img', ['src' => 'img/styde.png',]);
@@ -50,7 +58,7 @@ class HtmlElementTest extends TestCase
     );
   }
 
-  //* @test */
+  /* @test */
   function it_scapes_the_html_attributes()
   {
     $element = new HtmlElement('img', ['src' => 'img/styde.png', 'title' => 'Curso de "Refactorizacion" en Styde']);
@@ -59,8 +67,7 @@ class HtmlElementTest extends TestCase
     );
   }
   
-  
-  //* @test */
+  /* @test */
   function it_generate_elements_whit_boolean_attributes()
   {
     $element = new HtmlElement('input', ['required']);
