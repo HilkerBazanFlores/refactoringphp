@@ -3,7 +3,7 @@
         'name' => 'hilke/refartoringphp',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '29f4d05fac39698be6f36deb1e1f0f16dca43e62',
+        'reference' => '5d85c8f4c29322cc9a1a2a66503539768aa28467',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'hilke/refartoringphp' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '29f4d05fac39698be6f36deb1e1f0f16dca43e62',
+            'reference' => '5d85c8f4c29322cc9a1a2a66503539768aa28467',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
